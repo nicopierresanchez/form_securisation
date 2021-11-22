@@ -22,17 +22,17 @@ $message = "Merci " . $_POST['user_firstname'] . " " . $_POST['user_name'] . " d
 
 
 if (empty($_POST['user_name'])) {
-    return $userNameError; 
+    echo $userNameError; 
 } elseif (empty($_POST['user_firstname'])) {
-    return $userFirstNameError; 
+    echo $userFirstNameError; 
 } elseif (empty($_POST['téléphone'])) {
-    return $téléphoneError;
+    echo $téléphoneError;
 } elseif (empty($_POST["user_mail"]) || (!filter_var($usermail, FILTER_VALIDATE_EMAIL))) {
-    return $usermailError;
+    echo $usermailError;
 } elseif (empty($_POST["sport"])) {
-    return $sportError;
+    echo $sportError;
 } elseif (empty($_POST["user_message"])) {
-    return $userMessageError;
+    echo $userMessageError;
 } else {
     echo $message;
 }
